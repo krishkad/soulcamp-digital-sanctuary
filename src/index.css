@@ -2,41 +2,63 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* SoulCamp Design System - Nature-inspired premium retreat aesthetic */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Brand Colors */
+    --forest-green: 180 26% 25%;          /* #2E4F4F */
+    --soft-beige: 45 73% 94%;             /* #FAF3E0 */
+    --accent-gold: 45 29% 55%;            /* #B9A064 */
+    --misty-blue: 150 23% 85%;            /* #CFE3DC */
+    --earth-brown: 25 35% 35%;            /* #654D3A */
+    --sage-green: 120 15% 60%;            /* #8B9B8B */
+    
+    /* Semantic Tokens */
+    --background: var(--soft-beige);
+    --foreground: var(--forest-green);
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: var(--forest-green);
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: var(--forest-green);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: var(--forest-green);
+    --primary-foreground: var(--soft-beige);
+    --primary-glow: 180 35% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: var(--misty-blue);
+    --secondary-foreground: var(--forest-green);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: var(--misty-blue);
+    --muted-foreground: var(--sage-green);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: var(--accent-gold);
+    --accent-foreground: var(--forest-green);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: var(--misty-blue);
+    --input: var(--misty-blue);
+    --ring: var(--accent-gold);
 
-    --radius: 0.5rem;
+    /* Design System Tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(var(--forest-green) / 0.9), hsl(var(--earth-brown) / 0.8));
+    --nature-gradient: linear-gradient(180deg, hsl(var(--soft-beige)), hsl(var(--misty-blue)));
+    --golden-gradient: linear-gradient(45deg, hsl(var(--accent-gold)), hsl(45 35% 65%));
+    
+    /* Shadows */
+    --shadow-nature: 0 10px 30px -10px hsl(var(--forest-green) / 0.2);
+    --shadow-golden: 0 8px 25px -8px hsl(var(--accent-gold) / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(var(--forest-green) / 0.1);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -55,42 +77,39 @@ All colors MUST be HSL.
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
+  /* Starlight Mode - Night theme for the retreat */
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: var(--forest-green);
+    --foreground: var(--soft-beige);
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: var(--earth-brown);
+    --card-foreground: var(--soft-beige);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: var(--earth-brown);
+    --popover-foreground: var(--soft-beige);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--accent-gold);
+    --primary-foreground: var(--forest-green);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 180 20% 20%;
+    --secondary-foreground: var(--soft-beige);
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 180 20% 20%;
+    --muted-foreground: var(--misty-blue);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: var(--accent-gold);
+    --accent-foreground: var(--forest-green);
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: var(--soft-beige);
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 180 20% 30%;
+    --input: 180 20% 30%;
+    --ring: var(--accent-gold);
+    
+    /* Dark mode gradients */
+    --hero-gradient: linear-gradient(135deg, hsl(var(--forest-green)), hsl(var(--earth-brown)));
+    --nature-gradient: linear-gradient(180deg, hsl(var(--forest-green)), hsl(180 30% 15%));
   }
 }
 
@@ -100,6 +119,105 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter scroll-smooth;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair;
+  }
+}
+
+@layer components {
+  /* Custom nature-inspired animations */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Hero section styles */
+  .hero-overlay {
+    background: var(--hero-gradient);
+  }
+  
+  /* Interactive elements */
+  .nature-card {
+    @apply bg-card border border-border rounded-xl p-6 shadow-sm transition-all duration-300;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .nature-card:hover {
+    box-shadow: var(--shadow-nature);
+    transform: translateY(-4px);
+  }
+  
+  .golden-button {
+    @apply bg-accent text-accent-foreground px-8 py-4 rounded-full font-medium transition-all duration-300;
+    background: var(--golden-gradient);
+    box-shadow: var(--shadow-golden);
+  }
+  
+  .golden-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-golden), 0 4px 20px hsl(var(--accent-gold) / 0.4);
+  }
+  
+  /* Cursor trail effect */
+  .cursor-trail {
+    pointer-events: none;
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: radial-gradient(circle, hsl(var(--accent-gold) / 0.3), transparent);
+    z-index: 9999;
+    animation: trailFade 1s ease-out forwards;
+  }
+}
+
+@layer utilities {
+  .bg-hero-gradient {
+    background: var(--hero-gradient);
+  }
+  
+  .bg-nature-gradient {
+    background: var(--nature-gradient);
+  }
+  
+  .text-shadow-soft {
+    text-shadow: 0 2px 10px hsl(var(--forest-green) / 0.3);
+  }
+}
+
+/* Keyframe animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes trailFade {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
   }
 }
