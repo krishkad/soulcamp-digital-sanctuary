@@ -6,53 +6,53 @@
 
 @layer base {
   :root {
-    /* Fresh Camping Resort Colors */
-    --vibrant-green: 142 76% 36%;         /* #16A085 - Fresh emerald */
-    --warm-cream: 48 100% 96%;            /* #FFFEF7 - Warm cream */
-    --sunset-orange: 24 100% 50%;         /* #FF6B35 - Energetic orange */
-    --sky-blue: 195 100% 75%;             /* #7DD3FC - Bright sky blue */
-    --pine-green: 158 64% 52%;            /* #34D399 - Fresh pine */
-    --coral-pink: 11 100% 70%;            /* #FF7F7F - Warm coral */
+    /* Elegant Green & Sandy Palette */
+    --deep-sage: 120 20% 25%;             /* #3A4F3A - Deep sophisticated sage */
+    --warm-sand: 40 50% 92%;              /* #F5F1E8 - Warm sandy cream */
+    --golden-sand: 45 40% 70%;            /* #C4B896 - Elegant golden sand */
+    --soft-mint: 140 30% 85%;             /* #D4E6D4 - Soft mint green */
+    --olive-green: 80 25% 45%;            /* #7A8471 - Muted olive */
+    --sage-mist: 120 15% 75%;             /* #BFC7BF - Light sage mist */
     
     /* Semantic Tokens */
-    --background: var(--warm-cream);
-    --foreground: var(--vibrant-green);
+    --background: var(--warm-sand);
+    --foreground: var(--deep-sage);
 
     --card: 0 0% 100%;
-    --card-foreground: var(--vibrant-green);
+    --card-foreground: var(--deep-sage);
 
     --popover: 0 0% 100%;
-    --popover-foreground: var(--vibrant-green);
+    --popover-foreground: var(--deep-sage);
 
-    --primary: var(--vibrant-green);
-    --primary-foreground: var(--warm-cream);
-    --primary-glow: 142 76% 45%;
+    --primary: var(--deep-sage);
+    --primary-foreground: var(--warm-sand);
+    --primary-glow: 120 20% 35%;
 
-    --secondary: var(--sky-blue);
-    --secondary-foreground: var(--vibrant-green);
+    --secondary: var(--soft-mint);
+    --secondary-foreground: var(--deep-sage);
 
-    --muted: var(--sky-blue);
-    --muted-foreground: var(--pine-green);
+    --muted: var(--soft-mint);
+    --muted-foreground: var(--olive-green);
 
-    --accent: var(--sunset-orange);
-    --accent-foreground: var(--warm-cream);
+    --accent: var(--golden-sand);
+    --accent-foreground: var(--deep-sage);
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: var(--sky-blue);
-    --input: var(--sky-blue);
-    --ring: var(--sunset-orange);
+    --border: var(--soft-mint);
+    --input: var(--soft-mint);
+    --ring: var(--golden-sand);
 
     /* Design System Tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(var(--vibrant-green) / 0.9), hsl(var(--pine-green) / 0.8));
-    --nature-gradient: linear-gradient(180deg, hsl(var(--warm-cream)), hsl(var(--sky-blue)));
-    --golden-gradient: linear-gradient(45deg, hsl(var(--sunset-orange)), hsl(24 100% 60%));
+    --hero-gradient: linear-gradient(135deg, hsl(var(--deep-sage) / 0.9), hsl(var(--olive-green) / 0.8));
+    --nature-gradient: linear-gradient(180deg, hsl(var(--warm-sand)), hsl(var(--soft-mint)));
+    --golden-gradient: linear-gradient(45deg, hsl(var(--golden-sand)), hsl(45 45% 75%));
     
     /* Shadows */
-    --shadow-nature: 0 10px 30px -10px hsl(var(--vibrant-green) / 0.2);
-    --shadow-golden: 0 8px 25px -8px hsl(var(--sunset-orange) / 0.3);
-    --shadow-soft: 0 4px 20px -4px hsl(var(--vibrant-green) / 0.1);
+    --shadow-nature: 0 10px 30px -10px hsl(var(--deep-sage) / 0.2);
+    --shadow-golden: 0 8px 25px -8px hsl(var(--golden-sand) / 0.3);
+    --shadow-soft: 0 4px 20px -4px hsl(var(--deep-sage) / 0.1);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,31 +77,31 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  /* Starlight Mode - Night theme for the retreat */
+  /* Starlight Mode - Night theme */
   .dark {
-    --background: var(--forest-green);
-    --foreground: var(--soft-beige);
+    --background: var(--deep-sage);
+    --foreground: var(--warm-sand);
 
-    --card: var(--earth-brown);
-    --card-foreground: var(--soft-beige);
+    --card: var(--olive-green);
+    --card-foreground: var(--warm-sand);
 
-    --popover: var(--earth-brown);
-    --popover-foreground: var(--soft-beige);
+    --popover: var(--olive-green);
+    --popover-foreground: var(--warm-sand);
 
-    --primary: var(--accent-gold);
-    --primary-foreground: var(--forest-green);
+    --primary: var(--golden-sand);
+    --primary-foreground: var(--deep-sage);
 
-    --secondary: 180 20% 20%;
-    --secondary-foreground: var(--soft-beige);
+    --secondary: 120 15% 20%;
+    --secondary-foreground: var(--warm-sand);
 
-    --muted: 180 20% 20%;
-    --muted-foreground: var(--misty-blue);
+    --muted: 120 15% 20%;
+    --muted-foreground: var(--sage-mist);
 
-    --accent: var(--accent-gold);
-    --accent-foreground: var(--forest-green);
+    --accent: var(--golden-sand);
+    --accent-foreground: var(--deep-sage);
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: var(--soft-beige);
+    --destructive-foreground: var(--warm-sand);
 
     --border: 180 20% 30%;
     --input: 180 20% 30%;
